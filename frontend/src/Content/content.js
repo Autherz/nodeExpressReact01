@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import './../App.css';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import '../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
+
 
 class Content extends React.Component {
     constructor(props){
@@ -30,7 +34,7 @@ class Content extends React.Component {
     }
 
     componentWillUnmount() {
-      // some doing before clear DOM 
+      console.log("Clear DOM")
     }
   
     handleClick() {
@@ -46,9 +50,9 @@ class Content extends React.Component {
           <p>{this.props.message}</p>
           <button onClick={this.handleClick}>Click me!</button>
           <p>Total click : {this.state.counter}</p>
-          <div className="container"> 
-              <div className="panel panel-default p50 uth-panel">
-                <table > 
+          <div> 
+              <div >
+                <table data-toggle ="table" > 
                   <thead>
                     <tr>
                       <th>Mem. id</th>
@@ -66,6 +70,13 @@ class Content extends React.Component {
                     )}
                   </tbody>
                 </table>
+
+                <BootstrapTable data={this.state.users} version='4'>
+                    <TableHeaderColumn isKey dataField='id'>Member. ID</TableHeaderColumn>
+                    <TableHeaderColumn dataField='username'>Member. Name</TableHeaderColumn>
+                    <TableHeaderColumn dataField='email'>Member. Email</TableHeaderColumn>
+                </BootstrapTable>
+                
               </div>
           </div>
           <p>-------------------------------------------</p>

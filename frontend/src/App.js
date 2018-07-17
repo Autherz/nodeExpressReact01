@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header/header' ; 
 import Footer from './Footer/footer' ; 
 import Content from './Content/content' ;
-
 function Hello(props) {
   return <h1>Ahoy! {props.name}</h1>
 }
@@ -23,12 +21,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <Header />
         </header>
 
-        <Header />
-        
         <Content message="This is message from app to Content"/>
         
         <Hello name = " Stateless is real!"/>
@@ -36,10 +31,6 @@ class App extends React.Component {
         <MyStatelessComponent title = "Stateless ES6" message="The Stateless ES6 is Goodgame real play god game !!"/>
         
         <Footer />
-
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
