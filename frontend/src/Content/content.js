@@ -42,7 +42,6 @@ class Content extends React.Component {
           <p>{this.props.message}</p>
           <button onClick={this.handleClick}>Click me!</button>
           <p>Total click : {this.state.counter}</p>
-          <input type='text'></input><button>ADD</button>
           <div className="container"> 
               <div className="panel panel-default p50 uth-panel">
                 <table > 
@@ -50,6 +49,7 @@ class Content extends React.Component {
                     <tr>
                       <th>Mem. id</th>
                       <th>Mem. name</th>
+                      <th>Mem. Email</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -57,6 +57,7 @@ class Content extends React.Component {
                       <tr key={member.id}>
                         <td>{member.id}</td>
                         <td>{member.username}</td>
+                        <td>{member.email}</td>
                       </tr>
                     )}
                   </tbody>
