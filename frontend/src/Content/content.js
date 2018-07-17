@@ -28,6 +28,10 @@ class Content extends React.Component {
         console.log('caught it ! ', err) ; 
       })
     }
+
+    componentWillUnmount() {
+      // some doing before clear DOM 
+    }
   
     handleClick() {
       this.setState(prevState => ({
