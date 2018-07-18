@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 require('babel-register');
-require('./src/js/server.js');
+//require('./src/js/server.js');
 
 var app = express();
 
